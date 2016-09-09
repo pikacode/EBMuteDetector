@@ -75,7 +75,7 @@ QQ：57380422
 ##### 检测频率
 
 ```objc
-EBMuteDetectorFrequency = 0.5; // 秒
+EBMuteDetectorFrequency = 0.5; // 秒，默认值 1
 ```
 
 *先设置频率，后开启检测频率才会生效。*
