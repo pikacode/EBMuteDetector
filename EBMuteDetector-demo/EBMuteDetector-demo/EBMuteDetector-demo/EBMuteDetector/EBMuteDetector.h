@@ -7,12 +7,14 @@
 
 #import <Foundation/Foundation.h>
 
+static NSTimeInterval EBMuteDetectorFrequency = 1;
+
 @interface EBMuteDetector : NSObject
 
 +(void)detectComplete:(void (^)(BOOL isMute))completionHandler;
 +(void)detecting:(void (^)(BOOL isMute))runningHandler;
 +(void)pause;
 +(void)resume;
-+(void)stop;
++(void)vibrate;
 
 @end

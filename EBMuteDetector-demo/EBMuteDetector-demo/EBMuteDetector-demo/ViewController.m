@@ -16,7 +16,7 @@
 @implementation ViewController
 
 - (IBAction)btn:(id)sender {
-    [EBMuteDetector stop];
+
 }
 - (IBAction)pause:(id)sender {
     [EBMuteDetector pause];
@@ -37,6 +37,9 @@
 //        }
 //    }];
 
+    [EBMuteDetector vibrate];
+
+    EBMuteDetectorFrequency = 1;
 
     [EBMuteDetector detecting:^(BOOL isMute) {
         if (isMute) {

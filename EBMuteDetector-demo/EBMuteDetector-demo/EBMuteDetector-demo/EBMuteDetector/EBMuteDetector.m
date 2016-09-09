@@ -8,6 +8,7 @@
 #import "EBMuteDetector.h"
 #import <AudioToolbox/AudioToolbox.h>
 #import <UIKit/UIKit.h>
+#import <AudioToolbox/AudioToolbox.h>
 
 @interface EBMuteDetector()
 
@@ -16,7 +17,6 @@
 @property (nonatomic,assign) SystemSoundID soundId;
 
 @property (nonatomic,retain) NSTimer *timer;
-
 
 typedef void (^DetectCompleteBlock)(BOOL isMute);
 
@@ -52,14 +52,14 @@ void EBSoundMuteNotificationCompletionProc(SystemSoundID  ssID,void* clientData)
 +(void)detectComplete:(void (^)(BOOL isMute))completionHandler{
     EBMuteDetector *detector = [EBMuteDetector sharedDetecotr];
     detector.interval = [NSDate timeIntervalSinceReferenceDate];
-    AudioServicesPlaySystemSound(detector.soundId);
     detector.completeBlock = completionHandler;
+    AudioServicesPlaySystemSound(detector.soundId);
 }
 
 +(void)detecting:(void (^)(BOOL isMute))runningHandler{
     EBMuteDetector *detector = [EBMuteDetector sharedDetecotr];
     detector.completeBlock = runningHandler;
-    detector.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:detector selector:@selector(detectComplete:) userInfo:nil repeats:YES];
+    detector.timer = [NSTimer scheduledTimerWithTimeInterval:EBMuteDetectorFrequency target:detector selector:@selector(detectComplete:) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:detector.timer forMode:NSRunLoopCommonModes];
 }
 
@@ -69,15 +69,15 @@ void EBSoundMuteNotificationCompletionProc(SystemSoundID  ssID,void* clientData)
 }
 
 +(void)pause{
-    [EBMuteDetector stop];
+    [[EBMuteDetector sharedDetecotr].timer invalidate];
 }
 
 +(void)resume{
-    [EBMuteDetector sharedDetecotr].timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:[EBMuteDetector sharedDetecotr] selector:@selector(detectComplete:) userInfo:nil repeats:YES];
+    [EBMuteDetector sharedDetecotr].timer = [NSTimer scheduledTimerWithTimeInterval:EBMuteDetectorFrequency target:[EBMuteDetector sharedDetecotr] selector:@selector(detectComplete:) userInfo:nil repeats:YES];
 }
 
-+(void)stop{
-    [[EBMuteDetector sharedDetecotr].timer invalidate];
++(void)vibrate{
+    AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
 }
 
 -(void)dealloc{
