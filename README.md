@@ -1,14 +1,12 @@
 查看中文文档 [Chinese README.md](/README_CHS.md)
+E-mail：pikacode@qq.com
 
 # EBMuteDetector
 
 Detect iPhone is mute(silence) or not, detect once or keep detecting . 
 
-E-mail：pikacode@qq.com
 
-
-
-# Installation
+## Installation
 
 ### manual
 
@@ -16,7 +14,7 @@ Download and Drag & Copy `EBMuteDetector` file folder from root into you Xcode p
 
 
 
-# Usage
+## Usage
 
 ### detect once
 
