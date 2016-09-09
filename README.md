@@ -10,7 +10,7 @@ E-mail：pikacode@qq.com
 
 # Installation
 
-### manual
+## manual
 
 Download and Drag & Copy `EBMuteDetector` file folder from root into you Xcode project.
 
@@ -18,7 +18,7 @@ Download and Drag & Copy `EBMuteDetector` file folder from root into you Xcode p
 
 # Usage
 
-### detect once
+## detect once
 
 only detect once, after calling the method, it will detect in 0.02~0.2 sec, when finished will run the `block`.
 
@@ -36,7 +36,7 @@ use case: if it's not mute, play a short ring.
 
 
 
-### detect in loop
+## detect in loop
 
 keep detecting  at intervals, then run the `block`.
 
