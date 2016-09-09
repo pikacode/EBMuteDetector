@@ -9,8 +9,10 @@
 
 @interface EBMuteDetector : NSObject
 
-+(EBMuteDetector*)sharedDetecotr;
-
--(void)detectComplete:(void (^)(BOOL isMute))completionHandler;
++(void)detectComplete:(void (^)(BOOL isMute))completionHandler;
++(void)detecting:(void (^)(BOOL isMute))runningHandler;
++(void)pause;
++(void)resume;
++(void)stop;
 
 @end

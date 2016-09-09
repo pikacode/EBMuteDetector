@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0DED4AEF1D6D4A2C00DD7F5F"
-               BuildableName = "EBMuteDetector.h EBMuteDetector-demo.app"
-               BlueprintName = "EBMuteDetector.h EBMuteDetector-demo"
-               ReferencedContainer = "container:EBMuteDetector.h EBMuteDetector-demo.xcodeproj">
+               BlueprintIdentifier = "0DC6F5C51D767743001891E4"
+               BuildableName = "EBMuteDetector-demo.app"
+               BlueprintName = "EBMuteDetector-demo"
+               ReferencedContainer = "container:EBMuteDetector-demo.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0DED4AEF1D6D4A2C00DD7F5F"
-            BuildableName = "EBMuteDetector.h EBMuteDetector-demo.app"
-            BlueprintName = "EBMuteDetector.h EBMuteDetector-demo"
-            ReferencedContainer = "container:EBMuteDetector.h EBMuteDetector-demo.xcodeproj">
+            BlueprintIdentifier = "0DC6F5C51D767743001891E4"
+            BuildableName = "EBMuteDetector-demo.app"
+            BlueprintName = "EBMuteDetector-demo"
+            ReferencedContainer = "container:EBMuteDetector-demo.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0DED4AEF1D6D4A2C00DD7F5F"
-            BuildableName = "EBMuteDetector.h EBMuteDetector-demo.app"
-            BlueprintName = "EBMuteDetector.h EBMuteDetector-demo"
-            ReferencedContainer = "container:EBMuteDetector.h EBMuteDetector-demo.xcodeproj">
+            BlueprintIdentifier = "0DC6F5C51D767743001891E4"
+            BuildableName = "EBMuteDetector-demo.app"
+            BlueprintName = "EBMuteDetector-demo"
+            ReferencedContainer = "container:EBMuteDetector-demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0DED4AEF1D6D4A2C00DD7F5F"
-            BuildableName = "EBMuteDetector.h EBMuteDetector-demo.app"
-            BlueprintName = "EBMuteDetector.h EBMuteDetector-demo"
-            ReferencedContainer = "container:EBMuteDetector.h EBMuteDetector-demo.xcodeproj">
+            BlueprintIdentifier = "0DC6F5C51D767743001891E4"
+            BuildableName = "EBMuteDetector-demo.app"
+            BlueprintName = "EBMuteDetector-demo"
+            ReferencedContainer = "container:EBMuteDetector-demo.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

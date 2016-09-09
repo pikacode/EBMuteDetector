@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:EBMuteDetector.h EBMuteDetector-demo.xcodeproj">
+      location = "self:EBMuteDetector-demo.xcodeproj">
    </FileRef>
 </Workspace>

@@ -15,6 +15,8 @@
 
 @property (nonatomic,assign) SystemSoundID soundId;
 
+@property (nonatomic,retain) NSTimer *timer;
+
 
 typedef void (^DetectCompleteBlock)(BOOL isMute);
 
@@ -47,10 +49,35 @@ void EBSoundMuteNotificationCompletionProc(SystemSoundID  ssID,void* clientData)
     return sharedDetecotr;
 }
 
++(void)detectComplete:(void (^)(BOOL isMute))completionHandler{
+    EBMuteDetector *detector = [EBMuteDetector sharedDetecotr];
+    detector.interval = [NSDate timeIntervalSinceReferenceDate];
+    AudioServicesPlaySystemSound(detector.soundId);
+    detector.completeBlock = completionHandler;
+}
+
++(void)detecting:(void (^)(BOOL isMute))runningHandler{
+    EBMuteDetector *detector = [EBMuteDetector sharedDetecotr];
+    detector.completeBlock = runningHandler;
+    detector.timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:detector selector:@selector(detectComplete:) userInfo:nil repeats:YES];
+    [[NSRunLoop currentRunLoop] addTimer:detector.timer forMode:NSRunLoopCommonModes];
+}
+
 -(void)detectComplete:(void (^)(BOOL isMute))completionHandler{
     self.interval = [NSDate timeIntervalSinceReferenceDate];
     AudioServicesPlaySystemSound(self.soundId);
-    self.completeBlock = completionHandler;
+}
+
++(void)pause{
+    [EBMuteDetector stop];
+}
+
++(void)resume{
+    [EBMuteDetector sharedDetecotr].timer = [NSTimer scheduledTimerWithTimeInterval:1.0 target:[EBMuteDetector sharedDetecotr] selector:@selector(detectComplete:) userInfo:nil repeats:YES];
+}
+
++(void)stop{
+    [[EBMuteDetector sharedDetecotr].timer invalidate];
 }
 
 -(void)dealloc{

@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>EBMuteDetector.h EBMuteDetector-demo.xcscheme</key>
+		<key>EBMuteDetector-demo.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0DED4AEF1D6D4A2C00DD7F5F</key>
+		<key>0DC6F5C51D767743001891E4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
