@@ -1,4 +1,5 @@
 查看中文文档 [Chinese README.md](/README_CHS.md)
+
 E-mail：pikacode@qq.com
 
 # EBMuteDetector
