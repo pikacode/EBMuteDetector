@@ -1,4 +1,5 @@
 view [English README.md](/README.md)
+QQ：57380422
 
 # EBMuteDetector
 检测 iPhone 是否静音，可只检测一次，也可循环监听。
@@ -6,8 +7,7 @@ view [English README.md](/README.md)
 QQ：57380422
 
 
-
-# 安装
+## 安装
 
 ### 手动安装
 
@@ -15,7 +15,7 @@ QQ：57380422
 
 
 
-# 使用
+## 使用
 
 ### 单次检测
 
