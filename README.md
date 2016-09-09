@@ -42,7 +42,7 @@ keep detecting  at intervals, then run the `block`.
 
 use case: when playing a music, if the mute changed, pause/resume the music.
 
-##### detect in loop
+#### detect in loop
 
 ```objc
 [EBMuteDetector detecting:^(BOOL isMute) {
@@ -54,25 +54,25 @@ use case: when playing a music, if the mute changed, pause/resume the music.
 }];
 ```
 
-##### pause
+#### pause
 
 ```objc
 [EBMuteDetector pause];
 ```
 
-##### resume
+#### resume
 
 ```objc
 [EBMuteDetector resume];
 ```
 
-##### vibrate
+#### vibrate
 
 ```objc
 [EBMuteDetector vibrate];
 ```
 
-##### Detecto Frequency
+#### Detecto Frequency
 
 ```objc
 EBMuteDetectorFrequency = 0.5; // secound, default is 1

@@ -41,7 +41,7 @@ QQ：57380422
 
 使用场景：播放音乐时，如果切换了静音开关，则及时的暂停/继续播放音乐。
 
-##### 循环检测
+#### 循环检测
 
 ```objc
 [EBMuteDetector detecting:^(BOOL isMute) {
@@ -53,25 +53,25 @@ QQ：57380422
 }];
 ```
 
-##### 暂停
+#### 暂停
 
 ```objc
 [EBMuteDetector pause];
 ```
 
-##### 继续
+#### 继续
 
 ```objc
 [EBMuteDetector resume];
 ```
 
-##### 振动
+#### 振动
 
 ```objc
 [EBMuteDetector vibrate];
 ```
 
-##### 检测频率
+#### 检测频率
 
 ```objc
 EBMuteDetectorFrequency = 0.5; // 秒
